@@ -1,0 +1,13 @@
+server:
+  port: 8484
+  context-path: /api
+security:
+    oauth2:
+      client:
+        client-id: clientOne
+        client-secret: secretOne
+        access-token-uri: http://localhost:8081/authServer/oauth/token
+        user-authorization-uri: http://localhost:8081/authServer/oauth/authorize
+        authorized-grant-types: authorization_code
+      resource:
+        user-info-uri: http://localhost:8081/authServer/user
